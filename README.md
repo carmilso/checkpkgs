@@ -32,6 +32,10 @@ $ cat ~/important-packages.log | checkpkg
 $ COMMUNITY_TESTING=1 MULTILIB_TESTING=1 TESTING=1 checkpkg foo bar
 ```
 
+## Installation
+
+You can install this package via the [AUR](https://aur.archlinux.org/packages/checkpkg/).
+
 ## Contact
 
 If you have any problem you can open an issue or email me at carmilso@upv.es.
