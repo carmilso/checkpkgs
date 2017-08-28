@@ -1,0 +1,43 @@
+# Russian translations for checkpkg package.
+# Copyright (C) 2017 THE checkpkg'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the checkpkg package.
+# Carlos <carmilso@inf.upv.es>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: checkpkg 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-28 20:26+0200\n"
+"PO-Revision-Date: 2017-08-11 18:59+0200\n"
+"Last-Translator: Carlos <carmilso@inf.upv.es>\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: checkpkg.sh:13
+msgid "Package %b%s %bnot installed%b. Its last version is %b%s%b.\\n"
+msgstr "Пакет %b%s %bне установлен%b. Его последняя версия %b%s%b.\\n"
+
+#: checkpkg.sh:15
+msgid "Package %b%s %boutdated%b [%b%s%b -> %b%s%b].\\n"
+msgstr "Пакет %b%s %bустарел%b [%b%s%b -> %b%s%b].\\n"
+
+#: checkpkg.sh:17
+msgid "Package %b%s %bup to date%b [%b%s%b].\\n"
+msgstr "Пакет %b%s %bактуальный%b [%b%s%b].\\n"
+
+#: checkpkg.sh:40
+msgid "Checking %s ...\\n\\n"
+msgstr "Проверка %s ...\\n\\n"
+
+#: checkpkg.sh:58
+msgid "Package %b%s %bnot found%b.\\n"
+msgstr "Пакет %b%s %bне найден%b.\\n"
+
+#: checkpkg.sh:65
+msgid "checkpkg is not installed."
+msgstr "checkpkg не установлен."

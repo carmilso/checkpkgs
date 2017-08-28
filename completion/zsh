@@ -1,0 +1,13 @@
+#compdef checkpkg
+
+_packages() {
+  local -a packages
+  packages=( $(pacman -Ssq "^$words[current]" 2>/dev/null) )
+  compadd "$@" -a packages
+}
+
+_checkpkg() {
+  _arguments -s -w : '*:package:_packages'
+}
+
+_checkpkg "$@"

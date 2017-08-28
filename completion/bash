@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+_checkpkg() {
+  local cur
+
+  COMPREPLY=()
+
+  cur="${COMP_WORDS[COMP_CWORD]}"
+
+  COMPREPLY=( $(compgen -W "$(pacman -Ssq "^$cur" 2>/dev/null)" -- "$cur") )
+}
+
+complete -F _checkpkg checkpkg
