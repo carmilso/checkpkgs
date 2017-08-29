@@ -148,9 +148,9 @@ set_testing_repositories() {
 ARCH="${ARCH:-$(uname -m)}"
 
 BASE_URL="https://www.archlinux.org/packages/search/json"
-ARCH_URL="&arch=any&arch=$ARCH"
-REPO_URL="&repo=Community&repo=Core&repo=Extra&repo=Multilib"
-NAME_URL="&name="
+ARCH_URL="arch=any&arch=$ARCH"
+REPO_URL="repo=Community&repo=Core&repo=Extra&repo=Multilib"
+NAME_URL="name="
 
 GC="\033[1;32m"  # green
 CC="\033[1;36m"  # cyan
@@ -159,6 +159,7 @@ NC="\033[0m"     # no color
 
 set_testing_repositories
 
+QUERY_URL="$BASE_URL?$ARCH_URL&$REPO_URL&$NAME_URL"
 
 typeset -a packages
 
