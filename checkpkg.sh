@@ -150,7 +150,6 @@ ARCH="${ARCH:-$(uname -m)}"
 BASE_URL="https://www.archlinux.org/packages/search/json"
 ARCH_URL="&arch=any&arch=$ARCH"
 REPO_URL="&repo=Community&repo=Core&repo=Extra&repo=Multilib"
-PAGE_URL="&page="
 Q_URL="&name="
 
 GC="\033[1;32m"  # green
