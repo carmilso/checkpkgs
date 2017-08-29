@@ -139,7 +139,7 @@ initial_checks() {
   [ ${#packages[@]} -eq 0 ] && exit 1
 }
 
-set_global_variables() {
+set_testing_repositories() {
   [ -n "$COMMUNITY_TESTING" ] && REPO_URL+="&repo=Community-Testing"
   [ -n "$MULTILIB_TESTING" ] && REPO_URL+="&repo=Multilib-Testing"
   [ -n "$TESTING" ] && REPO_URL+="&repo=Testing"
@@ -157,7 +157,8 @@ CC="\033[1;36m"  # cyan
 WC="\033[1;97m"  # white
 NC="\033[0m"     # no color
 
-set_global_variables
+set_testing_repositories
+
 
 typeset -a packages
 
