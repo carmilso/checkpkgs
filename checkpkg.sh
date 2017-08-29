@@ -146,8 +146,9 @@ set_global_variables() {
 }
 
 ARCH="${ARCH:-$(uname -m)}"
-BASE_URL="https://www.archlinux.org/packages/?sort=-last_update"
 ARCH_URL="&arch=any&arch="
+
+BASE_URL="https://www.archlinux.org/packages/search/json"
 REPO_URL="&repo=Community&repo=Core&repo=Extra&repo=Multilib"
 Q_URL="&q="
 PAGE_URL="&page="
