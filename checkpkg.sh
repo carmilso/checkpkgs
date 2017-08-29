@@ -64,7 +64,7 @@ get_package_info() {
 
   pkg="$1"
 
-  pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$Q_URL$pkg")
+  pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$NAME_URL$pkg")
   pkg_req_status=$(get_request_code "$pkg_req")
   pkg_req_pages=$(get_pages_number "$pkg_req")
 
@@ -74,7 +74,7 @@ get_package_info() {
 
   for i in $(seq 2 "$pkg_req_pages"); do
     if [ -z "$pkg_info" ] && [ "$pkg_req_status" -eq 200 ]; then
-      pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$Q_URL$pkg$PAGE_URL$i")
+      pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$NAME_URL$pkg$PAGE_URL$i")
       pkg_req_status=$(get_request_code "$pkg_req")
 
       pkg_info=$(match_package_info "$pkg" "$pkg_req")
@@ -150,7 +150,7 @@ ARCH="${ARCH:-$(uname -m)}"
 BASE_URL="https://www.archlinux.org/packages/search/json"
 ARCH_URL="&arch=any&arch=$ARCH"
 REPO_URL="&repo=Community&repo=Core&repo=Extra&repo=Multilib"
-Q_URL="&name="
+NAME_URL="&name="
 
 GC="\033[1;32m"  # green
 CC="\033[1;36m"  # cyan
