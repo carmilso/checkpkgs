@@ -147,7 +147,7 @@ set_testing_repositories() {
 
 ARCH="${ARCH:-$(uname -m)}"
 
-BASE_URL="https://www.archlinux.org/packages/search/json"
+BASE_URL="https://www.archlinux.org/packages/search/json/"
 ARCH_URL="arch=any&arch=$ARCH"
 REPO_URL="repo=Community&repo=Core&repo=Extra&repo=Multilib"
 NAME_URL="name="
