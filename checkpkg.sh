@@ -23,42 +23,6 @@ check_version() {
   fi
 }
 
-get_request_code() {
-  local req_info req_status
-
-  req_info="$1"
-  req_status=$(tail -n1 <<<"$req_info")
-
-  echo "$req_status"
-}
-
-get_pages_number() {
-  local req_info
-
-  req_info="$1"
-
-  pages_number=$(grep -E "Page\s+[0-9]+\s+of\s+[0-9]+.</p>" <<<"$req_info" | \
-  head -n1 | \
-  sed 's/.\+[0-9]\+\s\+of\s\+\([0-9]\).\+/\1/g')
-
-  echo "$pages_number"
-}
-
-match_package_info() {
-  local pkg pkg_req pkg_info
-
-  pkg="$1"
-  pkg_req="$2"
-
-  pkg_info=$(echo "$pkg_req" | \
-  sed '/^\s*$/d' | \
-  grep -E "<td><a\s*href=\"\/packages\/\w+\/($ARCH|any)\/.*\"[^>]*>$pkg<\/a><\/td>" -A1 | \
-  sed 's/\(\s*\|<[^>]\+>\)//g' | \
-  head -n 2)
-
-  echo "$pkg_info"
-}
-
 get_package_info() {
   local pkg pkg_req pkg_req_status pkg_req_pages pkg_info
 
