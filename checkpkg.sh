@@ -23,29 +23,16 @@ check_version() {
   fi
 }
 
-get_package_info() {
-  local pkg pkg_req pkg_req_status pkg_req_pages pkg_info
+get_package_version() {
+  local pkg pkg_info pkg_version pkg_rel
 
   pkg="$1"
 
-  pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$NAME_URL$pkg")
-  pkg_req_status=$(get_request_code "$pkg_req")
-  pkg_req_pages=$(get_pages_number "$pkg_req")
+  pkg_info=$(curl -s "$QUERY_URL$pkg" | jq -c '.results[0]')
+  pkg_version=$(jq '.pkgver' <<<"$pkg_info")
+  pkg_rel=$(jq '.pkgrel' <<<"$pkg_info")
 
-  pkg_req_pages=${pkg_req_pages:-1}
-
-  pkg_info=$(match_package_info "$pkg" "$pkg_req")
-
-  for i in $(seq 2 "$pkg_req_pages"); do
-    if [ -z "$pkg_info" ] && [ "$pkg_req_status" -eq 200 ]; then
-      pkg_req=$(curl -s -w '%{http_code}' "$BASE_URL$ARCH_URL$ARCH$REPO_URL$NAME_URL$pkg$PAGE_URL$i")
-      pkg_req_status=$(get_request_code "$pkg_req")
-
-      pkg_info=$(match_package_info "$pkg" "$pkg_req")
-    fi
-  done
-
-  echo "$pkg_info"
+  echo "$pkg_version-$pkg_rel" | tr -d '"'
 }
 
 gather() {
@@ -61,20 +48,17 @@ print_array() {
 }
 
 show_info() {
-  local pkg pkg_info pkg_name pkg_version local_version
+  local pkg pkg_info pkg_version local_version
 
   pkg="$1"
 
-  pkg_info=$(get_package_info "$pkg")
+  pkg_version=$(get_package_version "$pkg")
 
-  pkg_name=$(head -n1 <<<"$pkg_info")
-  pkg_version=$(tail -n1 <<<"$pkg_info")
-
-  if [ -n "$pkg_name" ]; then
-    local_version=$(pacman -Q "$pkg" 2>/dev/null | awk '{ print $2 }')
-    check_version "$local_version" "$pkg_version" "$pkg_name"
-  else
+  if [[ "$pkg_version" =~ "null" ]]; then
     gather "$(gettext "Package %b%s %bnot found%b.\n")" "$WC" "$pkg" "$CC" "$NC"
+  else
+    local_version=$(pacman -Q "$pkg" 2>/dev/null | awk '{ print $2 }')
+    check_version "$local_version" "$pkg_version" "$pkg"
   fi
 }
 
