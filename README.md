@@ -1,6 +1,6 @@
 # checkpkg
 
-Check for Arch Linux packages updates given from arguments or **stdin** with no need to update the local repositories. Not installed and fake packages can also be checked.
+Bash script to check updates of Arch Linux packages given from arguments or stdin with no need to update the local repositories. Not installed and fake packages can also be checked.
 
 By default, it doesn't look for updates in testing repositories, but you can do it using global variables as it is shown in the following section.
 
