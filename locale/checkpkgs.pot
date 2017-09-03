@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the checkpkg package.
+# This file is distributed under the same license as the checkpkgs package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: checkpkg 1.0\n"
+"Project-Id-Version: checkpkgs 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 20:26+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -17,26 +17,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: checkpkg.sh:13
+#: checkpkgs.sh:13
 msgid "Package %b%s %bnot installed%b. Its last version is %b%s%b.\\n"
 msgstr ""
 
-#: checkpkg.sh:15
+#: checkpkgs.sh:15
 msgid "Package %b%s %boutdated%b [%b%s%b -> %b%s%b].\\n"
 msgstr ""
 
-#: checkpkg.sh:17
+#: checkpkgs.sh:17
 msgid "Package %b%s %bup to date%b [%b%s%b].\\n"
 msgstr ""
 
-#: checkpkg.sh:40
+#: checkpkgs.sh:40
 msgid "Checking %s ...\\n\\n"
 msgstr ""
 
-#: checkpkg.sh:58
+#: checkpkgs.sh:58
 msgid "Package %b%s %bnot found%b.\\n"
 msgstr ""
 
-#: checkpkg.sh:65
+#: checkpkgs.sh:65
 msgid "pacman is not installed."
 msgstr ""

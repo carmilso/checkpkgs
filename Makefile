@@ -1,4 +1,4 @@
-PKG := checkpkg
+PKG := checkpkgs
 VERSION := 1.0
 
 SHELL := /bin/bash

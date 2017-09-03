@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-_checkpkg() {
+_checkpkgs() {
   local cur
 
   COMPREPLY=()
@@ -11,4 +11,4 @@ _checkpkg() {
   COMPREPLY=( $(compgen -W "$(pacman -Ssq "^$cur" 2>/dev/null)" -- "$cur") )
 }
 
-complete -F _checkpkg checkpkg
+complete -F _checkpkgs checkpkgs
