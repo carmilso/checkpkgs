@@ -4,7 +4,7 @@
 # shellcheck disable=SC1091
 . gettext.sh
 
-export TEXTDOMAIN=checkpkg
+export TEXTDOMAIN=checkpkgs
 export TEXTDOMAINDIR=/usr/share/locale
 
 check_version() {

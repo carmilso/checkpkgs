@@ -1,4 +1,4 @@
-#compdef checkpkg
+#compdef checkpkgs
 
 _packages() {
   local -a packages
@@ -6,8 +6,8 @@ _packages() {
   compadd "$@" -a packages
 }
 
-_checkpkg() {
+_checkpkgs() {
   _arguments -s -w : '*:package:_packages'
 }
 
-_checkpkg "$@"
+_checkpkgs "$@"

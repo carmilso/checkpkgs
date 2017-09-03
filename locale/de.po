@@ -1,11 +1,11 @@
-# German translations for checkpkg package.
-# Copyright (C) 2017 THE checkpkg'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the checkpkg package.
+# German translations for checkpkgs package.
+# Copyright (C) 2017 THE checkpkgs'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the checkpkgs package.
 # Carlos <carmilso@inf.upv.es>, 2017.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: checkpkg 1.0\n"
+"Project-Id-Version: checkpkgs 1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-28 20:26+0200\n"
 "PO-Revision-Date: 2017-08-11 18:58+0200\n"
@@ -17,26 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: checkpkg.sh:13
+#: checkpkgs.sh:13
 msgid "Package %b%s %bnot installed%b. Its last version is %b%s%b.\\n"
 msgstr "Paket %b%s %bnicht installiert%b. Die letzte Version ist %b%s%b.\\n"
 
-#: checkpkg.sh:15
+#: checkpkgs.sh:15
 msgid "Package %b%s %boutdated%b [%b%s%b -> %b%s%b].\\n"
 msgstr "Paket %b%s %babgelaufen%b [%b%s%b -> %b%s%b].\\n"
 
-#: checkpkg.sh:17
+#: checkpkgs.sh:17
 msgid "Package %b%s %bup to date%b [%b%s%b].\\n"
 msgstr "Paket %b%s %bauf dem neuesten Stand%b [%b%s%b].\\n"
 
-#: checkpkg.sh:40
+#: checkpkgs.sh:40
 msgid "Checking %s ...\\n\\n"
 msgstr "Überprüfung %s...\\n\\n"
 
-#: checkpkg.sh:58
+#: checkpkgs.sh:58
 msgid "Package %b%s %bnot found%b.\\n"
 msgstr "Paket %b%s %bnicht gefunden%b.\\n"
 
-#: checkpkg.sh:65
+#: checkpkgs.sh:65
 msgid "pacman is not installed."
 msgstr "pacman ist nicht installiert."

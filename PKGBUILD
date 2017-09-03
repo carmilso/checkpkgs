@@ -1,16 +1,16 @@
 # Author: Carlos Millán Soler <carmilso@upv.es>
 
-pkgname=checkpkg
+pkgname=checkpkgs
 pkgver=1.1
 pkgrel=1
 pkgdesc="Bash script to check updates of packages given from arguments or stdin with no need to update the local repositories."
 arch=('any')
 url="https://github.com/carmilso/$pkgname"
 license=('GPL3')
-source=("https://github.com/carmilso/$pkgname/releases/download/v$pkgver/$pkgname-$pkgver.tar.gz")
+source=("https://github.com/carmilso/$pkgname/releases/download/v$pkgver-$pkgrel/$pkgname-$pkgver-$pkgrel.tar.gz")
 depends=('jq')
 
 package() {
-  cd "$pkgname-$pkgver"
+  cd "$pkgname-$pkgver-$pkgrel"
   make DESTDIR="$pkgdir" install
 }

@@ -1,11 +1,11 @@
-# checkpkg
+# checkpkgs
 
 Bash script to check updates of Arch Linux packages given from arguments or stdin with no need to update the local repositories. Not installed and fake packages can also be checked.
 
 By default, it doesn't look for updates in testing repositories, but you can do it using global variables as it is shown in the following section.
 
 ```
-$ checkpkg [package, ...] [options]
+$ checkpkgs [package, ...] [options]
 ```
 
 ![demo](./demo.gif)
@@ -14,27 +14,27 @@ $ checkpkg [package, ...] [options]
 
 * Look for updates of given packages.
 ```
-$ checkpkg foo bar
+$ checkpkgs foo bar
 ```
 
 * Look for updates of given packages with ordered output.
 ```
-$ checkpkg foo bar --ordered
+$ checkpkgs foo bar --ordered
 ```
 
 * Look for updates of given packages from **stdin**.
 ```
-$ cat ~/important-packages.log | checkpkg
+$ cat ~/important-packages.log | checkpkgs
 ```
 
 * Look for them also in Community-Testing, Multilib-Testing and Testing.
 ```
-$ COMMUNITY_TESTING=1 MULTILIB_TESTING=1 TESTING=1 checkpkg foo bar
+$ COMMUNITY_TESTING=1 MULTILIB_TESTING=1 TESTING=1 checkpkgs foo bar
 ```
 
 ## Installation
 
-You can install this package via the [AUR](https://aur.archlinux.org/packages/checkpkg/).
+You can install this package via the [AUR](https://aur.archlinux.org/packages/checkpkgs/).
 
 ## Contact
 

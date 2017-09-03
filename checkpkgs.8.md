@@ -1,10 +1,10 @@
-% checkpkg(8) checkpkg User Manuals
+% checkpkgs(8) checkpkgs User Manuals
 % Carlos Millán Soler
 % August 2017
 
 # SYNOPSIS
 
-checkpkg [*package*, ...] [*options*]
+checkpkgs [*package*, ...] [*options*]
 
 # DESCRIPTION
 
@@ -31,16 +31,16 @@ Check for Arch Linux packages updates given from arguments or **stdin** with no 
 
 # EXAMPLES OF USE
 
-➜ checkpkg foo bar fakepkg
+➜ checkpkgs foo bar fakepkg
 
-➜ checkpkg foo bar fakepkg --ordered
+➜ checkpkgs foo bar fakepkg --ordered
 
-➜ COMMUNITY_TESTING=1 checkpkg foo bar fakepkg
+➜ COMMUNITY_TESTING=1 checkpkgs foo bar fakepkg
 
-➜ MULTILIB_TESTING=1 checkpkg foo bar fakepkg
+➜ MULTILIB_TESTING=1 checkpkgs foo bar fakepkg
 
-➜ TESTING=1 checkpkg foo bar fakepkg
+➜ TESTING=1 checkpkgs foo bar fakepkg
 
 # MORE INFO
 
-The checkpkg source code may be downloaded from https://github.com/carmilso/checkpkg
+The checkpkgs source code may be downloaded from https://github.com/carmilso/checkpkgs
