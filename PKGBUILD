@@ -3,7 +3,7 @@
 pkgname=checkpkgs
 pkgver=1.1
 pkgrel=1
-pkgdesc="Bash script to check updates of packages given from arguments or stdin with no need to update the local repositories."
+pkgdesc="Bash script to check updates of given packages with no need to update the local repositories."
 arch=('any')
 url="https://github.com/carmilso/$pkgname"
 license=('GPL3')
